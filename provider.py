@@ -5,25 +5,20 @@ headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 class Provider:
 
-  def __init__(self, device, targetPrice, shop, url, classname, childElement) -> None:
+  def __init__(self, device, targetPrice, shop, url, classname) -> None:
     
     self.device = device
     self.targetPrice = targetPrice
     self.shop = shop
     self.url = url
     self.classname = classname
-    self.childElement = childElement
 
   def checkPrice(self) -> float:
     
     page = requests.get(self.url, headers = headers)
     soup = BeautifulSoup(page.content, 'html.parser')
     
-    if self.childElement != None:
-      price = soup.find(class_ = self.classname).findChild(self.childElement).get_text().strip()
-    else:
-      price = soup.find(class_ = self.classname).get_text().strip()
-
+    price = soup.select_one(self.classname).get_text().strip()
     price = float(price[0:5])
     
     if(price <= self.targetPrice):

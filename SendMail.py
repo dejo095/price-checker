@@ -17,7 +17,7 @@ class SendMail:
 
     server.login(self.emailFrom, self.password)
 
-    subject = 'Price Drop for ' + device
+    subject = shop + 'has price drop for ' + device
     body = 'On ' + shop + ' price dropped to ' + str(price) + '\n\n'
     body += 'Product link ' + URL
 
