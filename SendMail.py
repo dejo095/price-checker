@@ -9,6 +9,7 @@ class SendMail:
 
   def send(self, device, shop, price, URL):
     
+    # If not using Gmail then update line below
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()

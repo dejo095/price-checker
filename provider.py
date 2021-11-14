@@ -14,7 +14,7 @@ class Provider:
     self.classname = classname
     self.childElement = childElement
 
-  def checkPrice(self):
+  def checkPrice(self) -> float:
     
     page = requests.get(self.url, headers = headers)
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -26,7 +26,7 @@ class Provider:
 
     price = float(price[0:5])
     
-    if(price < self.targetPrice):
+    if(price <= self.targetPrice):
       return price
     
-    return None
+    return 0.0
