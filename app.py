@@ -9,7 +9,7 @@ emailTo = '' # eamil address where you want emails to arrive
 emailPass = '' # Gmail app password
 
 # Create as many products as you need
-# example = Provide("Led TV", targetPrice, "Ebay", "http://www.ebay.com/product/....", ".product-price div p.action")
+# example = Provide("Led TV", targetPrice float, "Ebay", "http://www.ebay.com/product/....", ".product-price div p.action")
 product1 = Provider("Product Name here", 1.00, "Webshop Name", "Url to product", "Classname where price is located")
 product2 = Provider("Product Name here", 1.00, "Webshop Name", "Url to product", "Classname where price is located")
 product3 = Provider("Product Name here", 1.00, "Webshop Name", "Url to product", "Classname where price is located")

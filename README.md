@@ -1,15 +1,15 @@
 # price-checker
 
-## Small python app that checks webshops for a price drop and send email in that case
+## Small python app that checks webshops for a price drop and sends email in case actual price is less than target price
 
 For this to work you need to have python installed. <br>
 
-You also need PIP pre instaled <br>
-Using PIP you need to install:
+You also need PIP instaled <br>
+Using PIP you need to install dependencies:
 ``` 
 pip install requests bs4
 ```
-You also need to have Gmail 2Fa enabled and setup Gmail app password, then use this generated password for
+You also need to have Gmail 2FA enabled and setup Gmail app passwords, then use this generated password for
 ```
 emailPass = '' # Gmail app password
 ```
